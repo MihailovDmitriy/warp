@@ -51,7 +51,7 @@ task HaplotypeCaller_GATK35_GVCF {
       -L ~{interval_list} \
       -O local.sharded.bam \
     && \
-    java -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10 -Xms2000m \
+    java -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10 -Xms500m \
       -jar /usr/gitc/GATK35.jar \
       -T HaplotypeCaller \
       -R ~{ref_fasta} \
